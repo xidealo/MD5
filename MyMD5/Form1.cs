@@ -18,12 +18,14 @@ namespace MyMD5
         }
 
         string text = "";
-        FindMD5 mD5 = new FindMD5();
+        MyMD5 two = new MyMD5();
 
         private void BT_GoMD5_Click(object sender, EventArgs e)
         {
             text = TB_TextForMD5.Text;
-            mD5.GetHash(text);
+            //  mD5.GetHash(text);
+
+            textBox1.Text = two.Processing(text).ToString();
 
         }
     }

@@ -30,6 +30,7 @@
         {
             this.TB_TextForMD5 = new System.Windows.Forms.TextBox();
             this.BT_GoMD5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TB_TextForMD5
@@ -38,6 +39,7 @@
             this.TB_TextForMD5.Name = "TB_TextForMD5";
             this.TB_TextForMD5.Size = new System.Drawing.Size(250, 20);
             this.TB_TextForMD5.TabIndex = 0;
+            this.TB_TextForMD5.Text = "hi";
             // 
             // BT_GoMD5
             // 
@@ -49,12 +51,20 @@
             this.BT_GoMD5.UseVisualStyleBackColor = true;
             this.BT_GoMD5.Click += new System.EventHandler(this.BT_GoMD5_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(252, 324);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BT_GoMD5);
             this.Controls.Add(this.TB_TextForMD5);
             this.Name = "Form1";
@@ -68,6 +78,7 @@
 
         private System.Windows.Forms.TextBox TB_TextForMD5;
         private System.Windows.Forms.Button BT_GoMD5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
