@@ -79,21 +79,19 @@ namespace MyMD5
             //step one and two         
             Full_m_byteInput(data);      
             CalculateMD5Value();
-
-            CheckSum();
-
             string hash = GoString();
 
             return hash;
         }
 
-        public string CheckSum()
+        public string Processing(byte[] data)
         {
-            string checksum = A.ToString() + B.ToString() + C.ToString() + D.ToString();
-            return checksum;
+            Full_m_byteInput(data);
+            CalculateMD5Value();
+            string hash = GoString();
 
+            return hash;
         }
-
 
         protected void Full_m_byteInput(string data)
         {
@@ -102,6 +100,16 @@ namespace MyMD5
             for (int i = 0; i < data.Length; i++)
             {
                 m_byteInput[i] = (byte)data[i];
+            }
+        }
+
+        protected void Full_m_byteInput(byte [] data)
+        {
+            m_byteInput = new byte[data.Length];
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                m_byteInput[i] = data[i];
             }
         }
 
@@ -219,9 +227,7 @@ namespace MyMD5
             return ((uiNumber >> 32 - shift) | (uiNumber << shift));
         }
 
-        // методы для вывода 
         //methods for output
-
         protected string GoString()
         {
             string str = null;
